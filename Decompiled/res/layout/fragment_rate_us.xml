@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:background="#ff0b0e18"
+    android:padding="10.0dip"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_marginBottom="16.0dip"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView
+        android:textAppearance="@style/TextAppearance.FontPath.Bold"
+        android:textSize="18.0sp"
+        android:textColor="#ffffffff"
+        android:id="@id/txtjudul"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="We Love You!"
+        android:layout_above="@id/rvDetail"
+        android:layout_centerHorizontal="true" />
+    <RelativeLayout
+        android:id="@id/rvDetail"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16.0dip"
+        android:layout_marginTop="16.0dip"
+        android:layout_centerInParent="true">
+        <ImageView
+            android:id="@id/imgLogo"
+            android:layout_width="100.0dip"
+            android:layout_height="wrap_content"
+            android:src="@drawable/logo_new" />
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16.0dip"
+            android:layout_toRightOf="@id/imgLogo"
+            android:layout_centerVertical="true">
+            <TextView
+                android:textAppearance="@style/TextAppearance.FontPath.Regular"
+                android:textColor="#ffffffff"
+                android:id="@id/txtDetails"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Jika Anda menikmati Game Guitar Band Indonesia ini dan ingin orang lain menikmatinya juga, beri dukungan dan peringkat untuk game ini." />
+            <TextView
+                android:textAppearance="@style/TextAppearance.FontPath.SemiBold"
+                android:textColor="#ffffffff"
+                android:id="@id/txtDetails2"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10.0dip"
+                android:text="Setiap vote sangat berharga!" />
+        </LinearLayout>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+        <Button
+            android:textAppearance="@style/TextAppearance.FontPath.SemiBold"
+            android:textColor="#ffffffff"
+            android:id="@id/btnReport"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Laporkan Masalah"
+            android:textAllCaps="false"
+            style="@style/Widget.AppCompat.Button.Borderless" />
+        <Button
+            android:theme="@style/MyButton"
+            android:textAppearance="@style/TextAppearance.FontPath.SemiBold"
+            android:textColor="@android:color/white"
+            android:id="@id/btnRateUs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Beri Kami Rating"
+            android:layout_alignParentRight="true"
+            android:textAllCaps="false" />
+    </RelativeLayout>
+</RelativeLayout>

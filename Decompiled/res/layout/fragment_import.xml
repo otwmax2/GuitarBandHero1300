@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:background="@android:color/white"
+    android:padding="10.0dip"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_marginBottom="16.0dip"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView
+        android:layout_width="50.0dip"
+        android:layout_height="50.0dip"
+        android:layout_marginBottom="10.0dip"
+        android:src="@drawable/baseline_download_for_offline_24"
+        android:layout_above="@id/txtjudul"
+        android:layout_centerHorizontal="true"
+        app:tint="@color/about_instagram_color" />
+    <TextView
+        android:textAppearance="@style/TextAppearance.FontPath.Bold"
+        android:textSize="20.0dip"
+        android:id="@id/txtjudul"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Import Downloaded ZIP File"
+        android:layout_above="@id/rvDetail"
+        android:layout_centerHorizontal="true" />
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@id/rvDetail"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16.0dip"
+        android:layout_marginTop="16.0dip"
+        android:layout_centerInParent="true">
+        <Button
+            android:theme="@style/MyButton"
+            android:textAppearance="@style/TextAppearance.FontPath.SemiBold"
+            android:textColor="@android:color/white"
+            android:layout_gravity="center"
+            android:id="@id/btnBrowseFile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pilih File ZIP"
+            android:textAllCaps="false" />
+        <RelativeLayout
+            android:id="@id/layoutProgress"
+            android:visibility="invisible"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6.0dip">
+            <ProgressBar
+                android:id="@id/progressBar"
+                android:layout_width="fill_parent"
+                android:layout_height="10.0dip"
+                android:layout_marginTop="10.0dip"
+                android:layout_marginRight="10.0dip"
+                android:max="100"
+                android:progress="0"
+                android:indeterminate="false"
+                android:layout_toLeftOf="@id/txtPersent"
+                android:layout_centerVertical="true"
+                style="@style/ProgressBarPrimary" />
+            <TextView
+                android:textAppearance="@style/TextAppearance.FontPath.Regular"
+                android:id="@id/txtPersent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0%"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true" />
+        </RelativeLayout>
+        <TextView
+            android:textAppearance="@style/TextAppearance.FontPath.Bold"
+            android:layout_gravity="center"
+            android:id="@id/txtStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="" />
+    </LinearLayout>
+    <Button
+        android:textAppearance="@style/TextAppearance.FontPath.SemiBold"
+        android:textSize="14.0dip"
+        android:textColor="@color/about_instagram_color"
+        android:layout_gravity="center"
+        android:id="@id/btnDownload"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Link Download File ZIP"
+        android:layout_alignParentBottom="true"
+        android:textAllCaps="false"
+        style="@style/Widget.AppCompat.Button.Borderless" />
+    <LinearLayout
+        android:layout_gravity="center"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true">
+        <Button
+            android:theme="@style/MyButton2"
+            android:textSize="12.0dip"
+            android:textColor="@color/about_instagram_color"
+            android:layout_gravity="center"
+            android:id="@id/txtNoteCreator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10.0dip"
+            android:text="Instagram"
+            android:drawableLeft="@drawable/about_icon_instagram_sm"
+            android:drawablePadding="6.0dip"
+            android:textAllCaps="false"
+            android:drawableTint="@color/about_instagram_color" />
+        <Button
+            android:theme="@style/MyButton2"
+            android:textSize="12.0dip"
+            android:textColor="@color/about_github_color"
+            android:layout_gravity="center"
+            android:id="@id/txtNoteCreatorTiktok"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10.0dip"
+            android:text="Tiktok"
+            android:drawableLeft="@drawable/icons8_tiktok_sm"
+            android:drawablePadding="6.0dip"
+            android:textAllCaps="false"
+            android:drawableTint="@color/about_github_color" />
+    </LinearLayout>
+</RelativeLayout>

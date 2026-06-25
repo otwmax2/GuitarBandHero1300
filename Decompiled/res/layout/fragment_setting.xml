@@ -1,0 +1,637 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    android:background="@android:color/transparent"
+    android:paddingTop="16.0dip"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:orientation="vertical"
+        android:background="@drawable/bg_import_card"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:textAppearance="@style/TextAppearance.FontPath.Bold"
+            android:textSize="14.0sp"
+            android:textColor="#ffffffff"
+            android:gravity="center_vertical"
+            android:padding="16.0dip"
+            android:layout_width="fill_parent"
+            android:layout_height="?actionBarSize"
+            android:text="SETTINGS" />
+        <TextView
+            android:background="@color/gray_text_color"
+            android:layout_width="fill_parent"
+            android:layout_height="0.100000024dip" />
+        <RelativeLayout
+            android:id="@id/mainAnimasi"
+            android:padding="@dimen/activity_horizontal_margin"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toStartOf="@id/toggleAnimasi"
+                android:layout_alignParentStart="true">
+                <TextView
+                    android:textAppearance="@style/TextAppearance.FontPath.SemiBold"
+                    android:textColor="#ffffffff"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Animasi Papan Gitar" />
+                <TextView
+                    android:textAppearance="@style/TextAppearance.FontPath.Regular"
+                    android:textColor="@color/gray_text_color"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Papan gitar akan bergerak sesuai kecepatan note" />
+            </LinearLayout>
+            <com.google.android.material.switchmaterial.SwitchMaterial
+                android:id="@id/toggleAnimasi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:backgroundTint="#ffffffff"
+                android:foregroundTint="#ffffffff"
+                app:thumbTint="@color/switch_thumb_tint"
+                app:trackTint="@color/switch_track_tint" />
+        </RelativeLayout>
+        <TextView
+            android:background="@color/gray_text_color"
+            android:layout_width="fill_parent"
+            android:layout_height="0.100000024dip" />
+        <RelativeLayout
+            android:id="@id/mainGitarGrid"
+            android:padding="@dimen/activity_horizontal_margin"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toStartOf="@id/toggleGuitarGrid"
+                android:layout_alignParentStart="true">
+                <TextView
+                    android:textAppearance="@style/TextAppearance.FontPath.SemiBold"
+                    android:textColor="#ffffffff"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Enable Guitar Grid" />
+                <TextView
+                    android:textAppearance="@style/TextAppearance.FontPath.Regular"
+                    android:textColor="@color/gray_text_color"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Grid pada papan permainan" />
+            </LinearLayout>
+            <com.google.android.material.switchmaterial.SwitchMaterial
+                android:id="@id/toggleGuitarGrid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:backgroundTint="#ffffffff"
+                android:foregroundTint="#ffffffff"
+                app:thumbTint="@color/switch_thumb_tint"
+                app:trackTint="@color/switch_track_tint" />
+        </RelativeLayout>
+        <TextView
+            android:background="@color/gray_text_color"
+            android:layout_width="fill_parent"
+            android:layout_height="0.100000024dip" />
+        <RelativeLayout
+            android:id="@id/mainVideoBackground"
+            android:padding="@dimen/activity_horizontal_margin"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toStartOf="@id/toggleVideoBackground"
+                android:layout_alignParentStart="true">
+                <TextView
+                    android:textAppearance="@style/TextAppearance.FontPath.SemiBold"
+                    android:textColor="#ffffffff"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Enable Video Background" />
+                <TextView
+                    android:textAppearance="@style/TextAppearance.FontPath.Regular"
+                    android:textColor="@color/gray_text_color"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Video will play as a background" />
+            </LinearLayout>
+            <com.google.android.material.switchmaterial.SwitchMaterial
+                android:id="@id/toggleVideoBackground"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:backgroundTint="#ffffffff"
+                android:foregroundTint="#ffffffff"
+                app:thumbTint="@color/switch_thumb_tint"
+                app:trackTint="@color/switch_track_tint" />
+        </RelativeLayout>
+        <TextView
+            android:background="@color/gray_text_color"
+            android:layout_width="fill_parent"
+            android:layout_height="0.100000024dip" />
+        <RelativeLayout
+            android:id="@id/mainShakeAction"
+            android:padding="@dimen/activity_horizontal_margin"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toStartOf="@id/toggleShakeAction"
+                android:layout_alignParentStart="true">
+                <TextView
+                    android:textAppearance="@style/TextAppearance.FontPath.SemiBold"
+                    android:textColor="#ffffffff"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Enable Vibrasi" />
+                <TextView
+                    android:textAppearance="@style/TextAppearance.FontPath.Regular"
+                    android:textColor="@color/gray_text_color"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Vibrasi ketika note gagal di hit" />
+            </LinearLayout>
+            <com.google.android.material.switchmaterial.SwitchMaterial
+                android:id="@id/toggleShakeAction"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:backgroundTint="#ffffffff"
+                android:foregroundTint="#ffffffff"
+                app:thumbTint="@color/switch_thumb_tint"
+                app:trackTint="@color/switch_track_tint" />
+        </RelativeLayout>
+        <TextView
+            android:background="@color/gray_text_color"
+            android:layout_width="fill_parent"
+            android:layout_height="0.100000024dip" />
+        <RelativeLayout
+            android:id="@id/mainSort"
+            android:padding="@dimen/activity_horizontal_margin"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:orientation="vertical"
+                android:id="@id/lay5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_alignParentStart="true">
+                <TextView
+                    android:textAppearance="@style/TextAppearance.FontPath.SemiBold"
+                    android:textColor="#ffffffff"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Volume Note Gagal" />
+                <TextView
+                    android:textAppearance="@style/TextAppearance.FontPath.Regular"
+                    android:textColor="@color/gray_text_color"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Suara ketika note gagal di tekan" />
+            </LinearLayout>
+            <androidx.appcompat.widget.AppCompatSeekBar
+                android:theme="@style/SeekBarColor"
+                android:id="@id/seekBarVolume"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16.0dip"
+                android:layout_marginRight="16.0dip"
+                android:max="100"
+                android:layout_toLeftOf="@id/seekValue"
+                android:layout_toRightOf="@id/lay5"
+                android:layout_centerVertical="true"
+                android:progressBackgroundTint="@android:color/white"
+                android:min="0" />
+            <TextView
+                android:textAppearance="@style/TextAppearance.FontPath.SemiBold"
+                android:textColor="#ffffffff"
+                android:gravity="right"
+                android:id="@id/seekValue"
+                android:layout_width="50.0dip"
+                android:layout_height="wrap_content"
+                android:text="10"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true" />
+        </RelativeLayout>
+        <TextView
+            android:background="@color/gray_text_color"
+            android:layout_width="fill_parent"
+            android:layout_height="0.100000024dip" />
+        <RelativeLayout
+            android:padding="@dimen/activity_horizontal_margin"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toStartOf="@id/spinnerSort"
+                android:layout_alignParentStart="true">
+                <TextView
+                    android:textAppearance="@style/TextAppearance.FontPath.SemiBold"
+                    android:textColor="#ffffffff"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Urutan Daftar Lagu" />
+                <TextView
+                    android:textAppearance="@style/TextAppearance.FontPath.Regular"
+                    android:textColor="@color/gray_text_color"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Urutkan daftar lagu berdasarkan" />
+            </LinearLayout>
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:gravity="right"
+                android:id="@id/spinnerSort"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:dropDownWidth="wrap_content"
+                android:spinnerMode="dropdown"
+                android:backgroundTint="#ffffffff" />
+        </RelativeLayout>
+        <TextView
+            android:background="@color/gray_text_color"
+            android:layout_width="fill_parent"
+            android:layout_height="0.100000024dip" />
+        <RelativeLayout
+            android:padding="@dimen/activity_horizontal_margin"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toStartOf="@id/btnClearData"
+                android:layout_alignParentStart="true">
+                <TextView
+                    android:textAppearance="@style/TextAppearance.FontPath.SemiBold"
+                    android:textColor="#ffffffff"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Clear App Data" />
+                <TextView
+                    android:textAppearance="@style/TextAppearance.FontPath.Regular"
+                    android:textColor="@color/gray_text_color"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Membersihkan data aplikasi" />
+            </LinearLayout>
+            <Button
+                android:theme="@style/MyButton"
+                android:textAppearance="@style/TextAppearance.FontPath.SemiBold"
+                android:textColor="@android:color/white"
+                android:id="@id/btnClearData"
+                android:background="@drawable/bg_cancel_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Clear"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true" />
+        </RelativeLayout>
+        <TextView
+            android:background="@color/gray_text_color"
+            android:layout_width="fill_parent"
+            android:layout_height="0.100000024dip" />
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@id/proFeatureSetting"
+            android:background="@drawable/list_gradient"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:textAppearance="@style/TextAppearance.FontPath.Bold"
+                android:textColor="@android:color/white"
+                android:gravity="center_vertical"
+                android:padding="16.0dip"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="PRO FITUR"
+                android:drawableLeft="@drawable/pro_icon" />
+            <TextView
+                android:background="@color/gray_text_color"
+                android:layout_width="fill_parent"
+                android:layout_height="0.100000024dip" />
+            <RelativeLayout
+                android:padding="@dimen/activity_horizontal_margin"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentStart="true">
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content">
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_toStartOf="@id/btnSettingView">
+                            <TextView
+                                android:textAppearance="@style/TextAppearance.FontPath.SemiBold"
+                                android:textColor="#ffffffff"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Atur View Game (BETA)" />
+                            <TextView
+                                android:textAppearance="@style/TextAppearance.FontPath.Regular"
+                                android:textColor="@color/gray_text_color"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Mengatur view game dan tombol" />
+                        </LinearLayout>
+                        <Button
+                            android:theme="@style/MyButton"
+                            android:textAppearance="@style/TextAppearance.FontPath.SemiBold"
+                            android:textColor="@android:color/white"
+                            android:id="@id/btnSettingView"
+                            android:background="@drawable/bg_cancel_btn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Setting"
+                            android:layout_alignParentRight="true" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </RelativeLayout>
+            <TextView
+                android:background="@color/gray_text_color"
+                android:layout_width="fill_parent"
+                android:layout_height="0.100000024dip" />
+            <TextView
+                android:background="@color/gray_text_color"
+                android:layout_width="fill_parent"
+                android:layout_height="0.100000024dip" />
+            <RelativeLayout
+                android:id="@id/layoutKecepatan"
+                android:padding="@dimen/activity_horizontal_margin"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentStart="true">
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content">
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:id="@id/layKecepatan"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_toStartOf="@id/btnResetKecepatan">
+                            <TextView
+                                android:textAppearance="@style/TextAppearance.FontPath.SemiBold"
+                                android:textColor="#ffffffff"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Atur Kecepatan" />
+                            <TextView
+                                android:textAppearance="@style/TextAppearance.FontPath.Regular"
+                                android:textColor="@color/gray_text_color"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Mengatur kecepatan untuk setiap level" />
+                        </LinearLayout>
+                        <Button
+                            android:theme="@style/MyButton"
+                            android:textAppearance="@style/TextAppearance.FontPath.SemiBold"
+                            android:textColor="@android:color/white"
+                            android:id="@id/btnResetKecepatan"
+                            android:background="@drawable/bg_cancel_btn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Reset"
+                            android:layout_alignParentRight="true" />
+                    </RelativeLayout>
+                    <TableLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_marginTop="10.0dip"
+                        android:stretchColumns="0,1">
+                        <TableRow>
+                            <TextView
+                                android:textAppearance="@style/TextAppearance.FontPath.SemiBold"
+                                android:textColor="#ffffffff"
+                                android:layout_gravity="center"
+                                android:id="@id/txtProgressEasy"
+                                android:text="Easy (90%)" />
+                            <TextView
+                                android:textAppearance="@style/TextAppearance.FontPath.SemiBold"
+                                android:textColor="#ffffffff"
+                                android:layout_gravity="center"
+                                android:id="@id/txtProgressMedium"
+                                android:text="Medium (100%)" />
+                        </TableRow>
+                        <TableRow>
+                            <androidx.appcompat.widget.AppCompatSeekBar
+                                android:theme="@style/SeekBarColor"
+                                android:id="@id/seekBarEasy"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16.0dip"
+                                android:layout_marginRight="16.0dip"
+                                android:max="300"
+                                android:progress="90"
+                                android:progressBackgroundTint="@android:color/white"
+                                android:min="90" />
+                            <androidx.appcompat.widget.AppCompatSeekBar
+                                android:theme="@style/SeekBarColor"
+                                android:id="@id/seekBarMedium"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16.0dip"
+                                android:layout_marginRight="16.0dip"
+                                android:max="300"
+                                android:progress="100"
+                                android:progressBackgroundTint="@android:color/white"
+                                android:min="90" />
+                        </TableRow>
+                        <TableRow
+                            android:layout_marginTop="16.0dip">
+                            <TextView
+                                android:textAppearance="@style/TextAppearance.FontPath.SemiBold"
+                                android:textColor="#ffffffff"
+                                android:layout_gravity="center"
+                                android:id="@id/txtProgressHard"
+                                android:text="Hard  (120%)" />
+                            <TextView
+                                android:textAppearance="@style/TextAppearance.FontPath.SemiBold"
+                                android:textColor="#ffffffff"
+                                android:layout_gravity="center"
+                                android:id="@id/txtProgressExpert"
+                                android:text="Expert  (130%)" />
+                        </TableRow>
+                        <TableRow>
+                            <androidx.appcompat.widget.AppCompatSeekBar
+                                android:theme="@style/SeekBarColor"
+                                android:id="@id/seekBarHard"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16.0dip"
+                                android:layout_marginRight="16.0dip"
+                                android:max="300"
+                                android:progress="120"
+                                android:progressBackgroundTint="@android:color/white"
+                                android:min="90" />
+                            <androidx.appcompat.widget.AppCompatSeekBar
+                                android:theme="@style/SeekBarColor"
+                                android:id="@id/seekBarExpert"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16.0dip"
+                                android:layout_marginRight="16.0dip"
+                                android:max="300"
+                                android:progress="130"
+                                android:progressBackgroundTint="@android:color/white"
+                                android:min="90" />
+                        </TableRow>
+                    </TableLayout>
+                </LinearLayout>
+            </RelativeLayout>
+            <TextView
+                android:background="@color/gray_text_color"
+                android:layout_width="fill_parent"
+                android:layout_height="0.100000024dip" />
+            <RelativeLayout
+                android:id="@id/userBack"
+                android:padding="@dimen/activity_horizontal_margin"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toStartOf="@id/btnChangeImage"
+                    android:layout_alignParentStart="true">
+                    <TextView
+                        android:textAppearance="@style/TextAppearance.FontPath.SemiBold"
+                        android:textColor="#ffffffff"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Background Game" />
+                    <TextView
+                        android:textAppearance="@style/TextAppearance.FontPath.Regular"
+                        android:textColor="@color/gray_text_color"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Ubah gambar background dari memori hp anda, rekomendasi ukuran 1280x720px" />
+                    <ImageView
+                        android:id="@id/userBackgroundImg"
+                        android:layout_width="150.0dip"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/background_game"
+                        android:adjustViewBounds="true" />
+                </LinearLayout>
+                <Button
+                    android:theme="@style/MyButton"
+                    android:textAppearance="@style/TextAppearance.FontPath.SemiBold"
+                    android:textColor="@android:color/white"
+                    android:id="@id/btnChangeImage"
+                    android:background="@drawable/bg_cancel_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ubah"
+                    android:layout_alignParentRight="true" />
+                <Button
+                    android:theme="@style/MyButtonHard"
+                    android:textColor="@android:color/white"
+                    android:id="@id/btnDeleteImage"
+                    android:visibility="gone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Default"
+                    android:layout_below="@id/btnChangeImage"
+                    android:layout_alignParentRight="true" />
+            </RelativeLayout>
+            <TextView
+                android:background="@color/gray_text_color"
+                android:layout_width="fill_parent"
+                android:layout_height="0.100000024dip" />
+            <RelativeLayout
+                android:id="@id/guitarBack"
+                android:padding="@dimen/activity_horizontal_margin"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toStartOf="@id/btnChangeGuitar"
+                    android:layout_alignParentStart="true">
+                    <TextView
+                        android:textAppearance="@style/TextAppearance.FontPath.SemiBold"
+                        android:textColor="#ffffffff"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Background Papan Gitar" />
+                    <TextView
+                        android:textAppearance="@style/TextAppearance.FontPath.Regular"
+                        android:textColor="@color/gray_text_color"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Ubah background papan gitar dari memori hp anda, rekomendasi ukuran 800x1600px" />
+                    <ImageView
+                        android:id="@id/userGuitarImg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="150.0dip"
+                        android:src="@drawable/guitar_neck"
+                        android:adjustViewBounds="true" />
+                </LinearLayout>
+                <Button
+                    android:theme="@style/MyButton"
+                    android:textAppearance="@style/TextAppearance.FontPath.SemiBold"
+                    android:textColor="@android:color/white"
+                    android:id="@id/btnChangeGuitar"
+                    android:background="@drawable/bg_cancel_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ubah"
+                    android:layout_alignParentRight="true" />
+                <Button
+                    android:theme="@style/MyButtonHard"
+                    android:textColor="@android:color/white"
+                    android:id="@id/btnDeleteGuitar"
+                    android:visibility="gone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Default"
+                    android:layout_below="@id/btnChangeGuitar"
+                    android:layout_alignParentRight="true" />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

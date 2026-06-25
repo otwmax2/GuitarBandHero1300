@@ -1,0 +1,52 @@
+.class public abstract Lcom/google/android/gms/internal/play_billing/zzw;
+.super Lcom/google/android/gms/internal/play_billing/zzav;
+.source "com.android.billingclient:billing@@9.0.0"
+
+# interfaces
+.implements Lcom/google/android/gms/internal/play_billing/zzx;
+
+
+# direct methods
+.method public constructor <init>()V
+    .registers 2
+
+    const-string v0, "com.android.vending.billing.IInAppBillingCreateAlternativeBillingOnlyTokenCallback"
+
+    invoke-direct {p0, v0}, Lcom/google/android/gms/internal/play_billing/zzav;-><init>(Ljava/lang/String;)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method protected final dispatchTransaction(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
+    .registers 5
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    const/4 p3, 0x1
+
+    if-ne p1, p3, :cond_0
+
+    sget-object p1, Landroid/os/Bundle;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    invoke-static {p2, p1}, Lcom/google/android/gms/internal/play_billing/zzaw;->zza(Landroid/os/Parcel;Landroid/os/Parcelable$Creator;)Landroid/os/Parcelable;
+
+    move-result-object p1
+
+    check-cast p1, Landroid/os/Bundle;
+
+    invoke-virtual {p0, p2}, Lcom/google/android/gms/internal/play_billing/zzav;->enforceNoDataAvail(Landroid/os/Parcel;)V
+
+    invoke-virtual {p0, p1}, Lcom/google/android/gms/internal/play_billing/zzw;->zza(Landroid/os/Bundle;)V
+
+    return p3
+
+    :cond_0
+    const/4 p0, 0x0
+
+    return p0
+.end method

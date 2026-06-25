@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:background="#ff050819"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@id/swipeContainer"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@id/txtFolderInfo"
+        android:layout_below="@id/laySearch">
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@id/RV_List"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:fillViewport="true"
+            android:layout_above="@id/txtFolderInfo" />
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+    <androidx.cardview.widget.CardView
+        android:id="@id/laySearch"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="#ff19204b"
+        app:cardCornerRadius="6.0dip">
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16.0dip"
+            android:layout_marginRight="16.0dip"
+            android:layout_alignParentTop="true">
+            <EditText
+                android:textAppearance="@style/TextAppearance.FontPath.Regular"
+                android:textColor="#ffffffff"
+                android:textColorHint="#ff949494"
+                android:id="@id/etSearch"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:hint="Cari Judul Lagu/Band..."
+                android:singleLine="true"
+                android:drawableLeft="@drawable/ic_baseline_search_24"
+                android:drawablePadding="16.0dip"
+                android:layout_toLeftOf="@id/diveder"
+                android:imeOptions="actionDone|flagNoFullscreen"
+                android:backgroundTint="#00ffffff"
+                app:endIconMode="clear_text" />
+            <TextView
+                android:id="@id/diveder"
+                android:background="#ff1c233c"
+                android:layout_width="1.0dip"
+                android:layout_height="42.0dip"
+                android:layout_toLeftOf="@id/BtnImport"
+                android:layout_centerVertical="true" />
+            <Button
+                android:theme="@style/MyButton"
+                android:textAppearance="@style/TextAppearance.FontPath.SemiBold"
+                android:textColor="#ffffffff"
+                android:id="@id/BtnImport"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6.0dip"
+                android:adjustViewBounds="true"
+                android:text="Import ZIP"
+                android:drawableRight="@drawable/baseline_folder_zip_24"
+                android:drawablePadding="6.0dip"
+                android:layout_alignTop="@id/etSearch"
+                android:layout_alignBottom="@id/etSearch"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:textAllCaps="false"
+                android:layout_marginStart="16.0dip"
+                android:drawableTint="#ffffffff" />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+    <TextView
+        android:textAppearance="@style/TextAppearance.FontPath.SemiBold"
+        android:textSize="20.0dip"
+        android:textColor="#ffffffff"
+        android:id="@id/TV_Empty"
+        android:visibility="visible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16.0dip"
+        android:text="Belum Ada Lagu"
+        android:layout_below="@id/laySearch"
+        android:layout_centerHorizontal="true" />
+    <TextView
+        android:textAppearance="@style/TextAppearance.FontPath.Regular"
+        android:textSize="10.0dip"
+        android:textStyle="italic"
+        android:id="@id/txtFolderInfo"
+        android:background="@color/bg_info"
+        android:padding="10.0dip"
+        android:visibility="visible"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Folder Penyimpanan : "
+        android:layout_alignParentBottom="true" />
+</RelativeLayout>

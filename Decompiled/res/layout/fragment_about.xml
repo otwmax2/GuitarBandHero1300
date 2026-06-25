@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:orientation="vertical"
+    android:id="@id/container"
+    android:background="#ff0b0e18"
+    android:paddingLeft="30.0dip"
+    android:paddingTop="10.0dip"
+    android:paddingRight="30.0dip"
+    android:paddingBottom="10.0dip"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TableLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:stretchColumns="0,1"
+        android:layout_centerInParent="true">
+        <TableRow>
+            <LinearLayout
+                android:layout_gravity="center"
+                android:orientation="vertical"
+                android:id="@id/lay1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/activity_horizontal_margin">
+                <ImageView
+                    android:layout_gravity="center"
+                    android:layout_width="100.0dip"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/logo_new"
+                    android:scaleType="fitXY"
+                    android:adjustViewBounds="true" />
+                <TextView
+                    android:textAppearance="@style/TextAppearance.FontPath.Bold"
+                    android:textSize="16.0sp"
+                    android:textColor="#ffffffff"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10.0dip"
+                    android:text="@string/app_name" />
+                <TextView
+                    android:textAppearance="@style/TextAppearance.FontPath.SemiBold"
+                    android:textSize="14.0sp"
+                    android:textColor="@color/gray_text_color"
+                    android:layout_gravity="center"
+                    android:id="@id/textView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Version" />
+                <TextView
+                    android:textAppearance="@style/TextAppearance.FontPath.Regular"
+                    android:textSize="14.0sp"
+                    android:textColor="@color/about_description_color"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:id="@id/txtAppDescription"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16.0dip"
+                    android:text="@string/app_description"
+                    android:lineSpacingExtra="8.0dip" />
+            </LinearLayout>
+            <androidx.core.widget.NestedScrollView
+                android:scrollbars="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:keepScreenOn="true">
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="30.0dip">
+                    <RelativeLayout
+                        android:orientation="horizontal"
+                        android:id="@id/show_con_us"
+                        android:padding="16.0dip"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:textAppearance="@style/TextAppearance.FontPath.SemiBold"
+                            android:textSize="14.0sp"
+                            android:textColor="#ffffffff"
+                            android:id="@id/t1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Connect with us" />
+                    </RelativeLayout>
+                    <TextView
+                        android:background="@color/about_separator_color"
+                        android:layout_width="fill_parent"
+                        android:layout_height="1.0dip"
+                        android:layout_weight="1.0" />
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:id="@id/con_us"
+                        android:visibility="visible"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                        android:layout_marginRight="@dimen/activity_horizontal_margin">
+                        <RelativeLayout
+                            android:id="@id/btntiktok"
+                            android:background="?selectableItemBackground"
+                            android:padding="12.0dip"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content">
+                            <ImageView
+                                android:id="@id/imageViewTiktok"
+                                android:layout_width="24.0dip"
+                                android:layout_height="24.0dip"
+                                android:layout_marginLeft="-2.0dip"
+                                app:srcCompat="@drawable/icons8_tiktok"
+                                app:tint="#ffffffff" />
+                            <TextView
+                                android:textAppearance="@style/TextAppearance.FontPath.Regular"
+                                android:textColor="#ffffffff"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10.0dip"
+                                android:text="Follow us on Tiktok"
+                                android:layout_toRightOf="@id/imageViewTiktok"
+                                android:layout_centerVertical="true"
+                                android:layout_toEndOf="@id/imageViewTiktok" />
+                        </RelativeLayout>
+                        <TextView
+                            android:background="@color/about_separator_color"
+                            android:layout_width="fill_parent"
+                            android:layout_height="1.0dip"
+                            android:layout_weight="1.0" />
+                        <RelativeLayout
+                            android:id="@id/btnInstagram"
+                            android:background="?selectableItemBackground"
+                            android:padding="12.0dip"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content">
+                            <ImageView
+                                android:id="@id/imageView8"
+                                android:layout_width="@dimen/about_icon_size"
+                                android:layout_height="@dimen/about_icon_size"
+                                app:srcCompat="@drawable/about_icon_instagram"
+                                app:tint="#ffffffff" />
+                            <TextView
+                                android:textAppearance="@style/TextAppearance.FontPath.Regular"
+                                android:textColor="#ffffffff"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10.0dip"
+                                android:text="@string/about_instagram"
+                                android:layout_toRightOf="@id/imageView8"
+                                android:layout_centerVertical="true"
+                                android:layout_toEndOf="@id/imageView8" />
+                        </RelativeLayout>
+                        <TextView
+                            android:background="@color/about_separator_color"
+                            android:layout_width="fill_parent"
+                            android:layout_height="1.0dip"
+                            android:layout_weight="1.0" />
+                        <RelativeLayout
+                            android:id="@id/btnFacebook"
+                            android:background="?selectableItemBackground"
+                            android:padding="12.0dip"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content">
+                            <ImageView
+                                android:id="@id/imageView6"
+                                android:layout_width="@dimen/about_icon_size"
+                                android:layout_height="@dimen/about_icon_size"
+                                app:srcCompat="@drawable/about_icon_facebook"
+                                app:tint="#ffffffff" />
+                            <TextView
+                                android:textAppearance="@style/TextAppearance.FontPath.Regular"
+                                android:textColor="#ffffffff"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10.0dip"
+                                android:text="@string/about_facebook"
+                                android:layout_toRightOf="@id/imageView6"
+                                android:layout_centerVertical="true"
+                                android:layout_toEndOf="@id/imageView6" />
+                        </RelativeLayout>
+                        <TextView
+                            android:background="@color/about_separator_color"
+                            android:layout_width="fill_parent"
+                            android:layout_height="1.0dip"
+                            android:layout_weight="1.0" />
+                        <RelativeLayout
+                            android:id="@id/btnTwitter"
+                            android:background="?selectableItemBackground"
+                            android:padding="12.0dip"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content">
+                            <ImageView
+                                android:id="@id/imageView7"
+                                android:layout_width="@dimen/about_icon_size"
+                                android:layout_height="@dimen/about_icon_size"
+                                app:srcCompat="@drawable/about_icon_twitter"
+                                app:tint="#ffffffff" />
+                            <TextView
+                                android:textAppearance="@style/TextAppearance.FontPath.Regular"
+                                android:textColor="#ffffffff"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10.0dip"
+                                android:text="@string/about_twitter"
+                                android:layout_toRightOf="@id/imageView7"
+                                android:layout_centerVertical="true"
+                                android:layout_toEndOf="@id/imageView7" />
+                        </RelativeLayout>
+                        <TextView
+                            android:background="@color/about_separator_color"
+                            android:layout_width="fill_parent"
+                            android:layout_height="1.0dip"
+                            android:layout_weight="1.0" />
+                        <RelativeLayout
+                            android:id="@id/btnPlaystore"
+                            android:background="?selectableItemBackground"
+                            android:padding="12.0dip"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content">
+                            <ImageView
+                                android:id="@id/imageView9"
+                                android:layout_width="@dimen/about_icon_size"
+                                android:layout_height="@dimen/about_icon_size"
+                                app:srcCompat="@drawable/about_icon_google_play"
+                                app:tint="#ffffffff" />
+                            <TextView
+                                android:textAppearance="@style/TextAppearance.FontPath.Regular"
+                                android:textColor="#ffffffff"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10.0dip"
+                                android:text="@string/about_play_store"
+                                android:layout_toRightOf="@id/imageView9"
+                                android:layout_centerVertical="true"
+                                android:layout_toEndOf="@id/imageView9" />
+                        </RelativeLayout>
+                        <TextView
+                            android:background="@color/about_separator_color"
+                            android:layout_width="fill_parent"
+                            android:layout_height="1.0dip"
+                            android:layout_weight="1.0" />
+                        <RelativeLayout
+                            android:id="@id/btnYoutube"
+                            android:background="?selectableItemBackground"
+                            android:padding="12.0dip"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content">
+                            <ImageView
+                                android:id="@id/imageView10"
+                                android:layout_width="@dimen/about_icon_size"
+                                android:layout_height="@dimen/about_icon_size"
+                                app:srcCompat="@drawable/about_icon_youtube"
+                                app:tint="#ffffffff" />
+                            <TextView
+                                android:textAppearance="@style/TextAppearance.FontPath.Regular"
+                                android:textColor="#ffffffff"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10.0dip"
+                                android:text="@string/about_youtube"
+                                android:layout_toRightOf="@id/imageView10"
+                                android:layout_centerVertical="true"
+                                android:layout_toEndOf="@id/imageView10" />
+                        </RelativeLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.core.widget.NestedScrollView>
+        </TableRow>
+    </TableLayout>
+</RelativeLayout>

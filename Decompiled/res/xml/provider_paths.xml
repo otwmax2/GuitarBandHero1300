@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths>
+    <external-media-path
+        name="gbi_song"
+        path="GBISong/" />
+    <external-media-path
+        name="chart_song"
+        path="ChartSong/" />
+    <external-cache-path
+        name="cache"
+        path="camera" />
+</paths>

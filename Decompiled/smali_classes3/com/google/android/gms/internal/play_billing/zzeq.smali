@@ -1,0 +1,50 @@
+.class public abstract Lcom/google/android/gms/internal/play_billing/zzeq;
+.super Ljava/lang/Object;
+.source "com.android.billingclient:billing@@9.0.0"
+
+# interfaces
+.implements Lcom/google/android/gms/internal/play_billing/zzhl;
+
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "<MessageType:",
+        "Lcom/google/android/gms/internal/play_billing/zzer<",
+        "TMessageType;TBuilderType;>;BuilderType:",
+        "Lcom/google/android/gms/internal/play_billing/zzeq<",
+        "TMessageType;TBuilderType;>;>",
+        "Ljava/lang/Object;",
+        "Lcom/google/android/gms/internal/play_billing/zzhl;"
+    }
+.end annotation
+
+
+# direct methods
+.method public constructor <init>()V
+    .registers 1
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public bridge synthetic clone()Ljava/lang/Object;
+    .registers 1
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/lang/CloneNotSupportedException;
+        }
+    .end annotation
+
+    invoke-virtual {p0}, Lcom/google/android/gms/internal/play_billing/zzeq;->zzf()Lcom/google/android/gms/internal/play_billing/zzeq;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public abstract zzf()Lcom/google/android/gms/internal/play_billing/zzeq;
+.end method

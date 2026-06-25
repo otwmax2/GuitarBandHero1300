@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:background="@drawable/backgroundimage"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <View
+        android:background="#b0000000"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+    <TextView
+        android:textAppearance="@style/TextAppearance.FontPath.Bold"
+        android:textSize="32.0sp"
+        android:textStyle="bold|italic"
+        android:textColor="#ffffffff"
+        android:id="@id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64.0dip"
+        android:text="SIAP BERMAIN!"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <ImageView
+        android:id="@id/imageView2"
+        android:layout_width="100.0dip"
+        android:layout_height="100.0dip"
+        android:layout_marginTop="32.0dip"
+        android:src="@drawable/ic_ok_ready"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView4"
+        app:tint="#fffdd835" />
+    <TextView
+        android:textAppearance="@style/TextAppearance.FontPath.Regular"
+        android:textSize="16.0sp"
+        android:textColor="#ffffffff"
+        android:gravity="center"
+        android:id="@id/textView5"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32.0dip"
+        android:text="Game sudah siap. Tunjukkan skill terbaikmu!"
+        android:layout_marginStart="48.0dip"
+        android:layout_marginEnd="48.0dip"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageView2" />
+</androidx.constraintlayout.widget.ConstraintLayout>

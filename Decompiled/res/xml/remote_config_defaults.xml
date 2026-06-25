@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<defaultsMap>
+    <entry>
+        <key>new_api_link</key>
+        <value>https://voblink.click/newgbi/api/</value>
+    </entry>
+    <entry>
+        <key>new_last_sync</key>
+        <value>2026-06-13 19:01:01</value>
+    </entry>
+    <entry>
+        <key>new_folder_url</key>
+        <value>https://voblink.click/newgbi/chart/</value>
+    </entry>
+    <entry>
+        <key>new_bgvideo_link</key>
+        <value>https://voblink.click/newgbi/assets/video/Background2.mp4</value>
+    </entry>
+    <entry>
+        <key>zip_download_link</key>
+        <value>https://drive.google.com/drive/folders/1fGhgTMFeDGuRFrsXsUcQMRIP8ruacp26?usp=sharing</value>
+    </entry>
+</defaultsMap>

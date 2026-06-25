@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout
+        android:id="@id/RL_MainLayout"
+        android:paddingLeft="16.0dip"
+        android:paddingRight="16.0dip"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:id="@id/linear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true">
+            <TextView
+                android:textAppearance="@style/TextAppearance.FontPath.SemiBold"
+                android:id="@id/TV_Judul"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Judul" />
+            <RelativeLayout
+                android:id="@id/infoMp3"
+                android:visibility="visible"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/TV_Judul">
+                <TextView
+                    android:textAppearance="@style/TextAppearance.FontPath.Bold"
+                    android:textSize="12.0sp"
+                    android:textColor="@android:color/white"
+                    android:background="@drawable/bg_rounded_default"
+                    android:paddingLeft="4.0dip"
+                    android:paddingRight="4.0dip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="song.ogg / song.mp3"
+                    android:layout_centerVertical="true" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@id/infoData"
+                android:visibility="visible"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6.0dip"
+                android:layout_toRightOf="@id/infoMp3"
+                android:layout_below="@id/TV_Judul">
+                <TextView
+                    android:textAppearance="@style/TextAppearance.FontPath.Bold"
+                    android:textSize="12.0sp"
+                    android:textColor="@android:color/white"
+                    android:background="@drawable/bg_rounded_default"
+                    android:paddingLeft="4.0dip"
+                    android:paddingRight="4.0dip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="notes.chart"
+                    android:layout_centerVertical="true" />
+            </RelativeLayout>
+        </RelativeLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:id="@id/layBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true">
+            <Button
+                android:theme="@style/MyButton"
+                android:textAppearance="@style/TextAppearance.FontPath.SemiBold"
+                android:textColor="@android:color/white"
+                android:layout_gravity="center"
+                android:id="@id/BtnPlayHard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mainkan"
+                android:textAllCaps="false" />
+        </LinearLayout>
+    </RelativeLayout>
+    <TextView
+        android:background="@color/gray_text_color"
+        android:layout_width="fill_parent"
+        android:layout_height="0.100000024dip"
+        android:layout_below="@id/RL_MainLayout" />
+</RelativeLayout>

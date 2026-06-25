@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:background="#ff0b0e18"
+    android:padding="10.0dip"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_marginBottom="16.0dip"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout
+        android:id="@id/rvDetail"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16.0dip"
+        android:layout_marginTop="16.0dip"
+        android:layout_centerInParent="true">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16.0dip"
+            android:layout_centerVertical="true">
+            <TextView
+                android:textAppearance="@style/TextAppearance.FontPath.Regular"
+                android:textColor="#ffffffff"
+                android:id="@id/txtDetails"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Game ini dibuat oleh satu orang.\n\n Tanpa studio besar.\n Tanpa tim pengembang.\n Tanpa dukungan perusahaan.\n \n Hanya dengan waktu, usaha, dan kecintaan terhadap musik serta game.\n Mungkin masih ada kekurangan di sana-sini, tetapi setiap nada, setiap menu, dan setiap detail yang kamu lihat adalah hasil dari perjalanan panjang yang dikerjakan sendiri.\n \n Terima kasih telah memberi kesempatan untuk memainkan karya ini.\n \n Selamat bermain, dan semoga kamu menikmatinya."
+                android:textAlignment="center" />
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,65 @@
+.class public final Lcom/unity3d/player/a/m;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Ljava/util/concurrent/Executor;
+
+
+# instance fields
+.field public final a:Landroid/os/Handler;
+
+
+# direct methods
+.method public constructor <init>(Landroid/os/Handler;)V
+    .registers 2
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lcom/unity3d/player/a/m;->a:Landroid/os/Handler;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final execute(Ljava/lang/Runnable;)V
+    .registers 3
+
+    iget-object v0, p0, Lcom/unity3d/player/a/m;->a:Landroid/os/Handler;
+
+    invoke-virtual {v0, p1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    return-void
+
+    :cond_0
+    new-instance p1, Ljava/util/concurrent/RejectedExecutionException;
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    iget-object p0, p0, Lcom/unity3d/player/a/m;->a:Landroid/os/Handler;
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    move-result-object p0
+
+    const-string v0, " is shutting down"
+
+    invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-direct {p1, p0}, Ljava/util/concurrent/RejectedExecutionException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method

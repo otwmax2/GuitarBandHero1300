@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:orientation="vertical"
+    android:id="@id/container"
+    android:background="@android:color/white"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        <WebView
+            android:id="@id/webview"
+            android:background="@android:color/white"
+            android:scrollbars="none"
+            android:longClickable="false"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10.0dip" />
+    </androidx.core.widget.NestedScrollView>
+    <TextView
+        android:textAppearance="@style/TextAppearance.FontPath.SemiBold"
+        android:textSize="20.0dip"
+        android:id="@id/TV_Empty"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16.0dip"
+        android:text="Tidak ada data"
+        android:layout_centerHorizontal="true" />
+    <ProgressBar
+        android:id="@id/PB_Progress"
+        android:visibility="visible"
+        android:layout_width="30.0dip"
+        android:layout_height="30.0dip"
+        android:layout_centerInParent="true" />
+</RelativeLayout>

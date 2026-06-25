@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:background="@drawable/backgroundimage"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <View
+        android:background="#b0000000"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+    <TextView
+        android:textAppearance="@style/TextAppearance.FontPath.Bold"
+        android:textSize="28.0sp"
+        android:textStyle="bold|italic"
+        android:textColor="#ffffffff"
+        android:id="@id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64.0dip"
+        android:text="Menyiapkan"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:textAppearance="@style/TextAppearance.FontPath.Regular"
+        android:textSize="14.0sp"
+        android:textColor="#ffcccccc"
+        android:gravity="center"
+        android:id="@id/subtitle"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16.0dip"
+        android:text="Mohon tunggu sebentar, kami sedang menyiapkan panggung untukmu!"
+        android:layout_marginStart="48.0dip"
+        android:layout_marginEnd="48.0dip"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title" />
+    <RelativeLayout
+        android:id="@id/iconCircle"
+        android:layout_width="70.0dip"
+        android:layout_height="70.0dip"
+        android:layout_marginTop="32.0dip"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/subtitle">
+        <ImageView
+            android:layout_width="50.0dip"
+            android:layout_height="50.0dip"
+            android:src="@drawable/baseline_downloading_24"
+            android:layout_centerInParent="true"
+            app:tint="#ffffffff" />
+    </RelativeLayout>
+    <ProgressBar
+        android:id="@id/progressBar"
+        android:layout_width="fill_parent"
+        android:layout_height="12.0dip"
+        android:layout_marginTop="16.0dip"
+        android:progress="0"
+        android:progressDrawable="@drawable/progress_bar_gradient"
+        android:layout_marginStart="64.0dip"
+        android:layout_marginEnd="64.0dip"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iconCircle"
+        style="?android:progressBarStyleHorizontal" />
+    <TextView
+        android:textSize="16.0sp"
+        android:textStyle="bold"
+        android:textColor="#ffffffff"
+        android:id="@id/progressPercent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8.0dip"
+        android:text="0%"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/progressBar" />
+    <TextView
+        android:textSize="14.0sp"
+        android:textColor="#ffffffff"
+        android:id="@id/statusText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32.0dip"
+        android:text="Ready"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/progressPercent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

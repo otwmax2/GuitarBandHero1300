@@ -1,0 +1,257 @@
+.class final Lcom/google/android/gms/internal/ads/zzeeg;
+.super Ljava/lang/Object;
+.source "com.google.android.gms:play-services-ads@@23.1.0"
+
+# interfaces
+.implements Lcom/google/android/gms/internal/ads/zzgea;
+
+
+# instance fields
+.field final synthetic zza:Z
+
+.field final synthetic zzb:Lcom/google/android/gms/internal/ads/zzeeh;
+
+
+# direct methods
+.method constructor <init>(Lcom/google/android/gms/internal/ads/zzeeh;Z)V
+    .registers 3
+
+    iput-boolean p2, p0, Lcom/google/android/gms/internal/ads/zzeeg;->zza:Z
+
+    iput-object p1, p0, Lcom/google/android/gms/internal/ads/zzeeg;->zzb:Lcom/google/android/gms/internal/ads/zzeeh;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final zza(Ljava/lang/Throwable;)V
+    .registers 2
+
+    const-string p0, "Failed to get signals bundle"
+
+    invoke-static {p0}, Lcom/google/android/gms/ads/internal/util/client/zzm;->zzg(Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public final bridge synthetic zzb(Ljava/lang/Object;)V
+    .registers 9
+
+    iget-object v0, p0, Lcom/google/android/gms/internal/ads/zzeeg;->zzb:Lcom/google/android/gms/internal/ads/zzeeh;
+
+    check-cast p1, Landroid/os/Bundle;
+
+    invoke-virtual {v0}, Lcom/google/android/gms/internal/ads/zzeei;->zzf()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    return-void
+
+    :cond_0
+    const-string v0, "ad_types"
+
+    invoke-virtual {p1, v0}, Landroid/os/Bundle;->get(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    instance-of v1, v0, Ljava/util/List;
+
+    if-eqz v1, :cond_1
+
+    check-cast v0, Ljava/util/List;
+
+    goto :goto_0
+
+    :cond_1
+    instance-of v1, v0, [Ljava/lang/String;
+
+    if-eqz v1, :cond_4
+
+    check-cast v0, [Ljava/lang/String;
+
+    invoke-static {v0}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object v0
+
+    :goto_0
+    new-instance v1, Ljava/util/ArrayList;
+
+    invoke-interface {v0}, Ljava/util/List;->size()I
+
+    move-result v2
+
+    invoke-direct {v1, v2}, Ljava/util/ArrayList;-><init>(I)V
+
+    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :cond_2
+    :goto_1
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_3
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v2
+
+    instance-of v3, v2, Ljava/lang/String;
+
+    if-eqz v3, :cond_2
+
+    check-cast v2, Ljava/lang/String;
+
+    invoke-interface {v1, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    goto :goto_1
+
+    :cond_3
+    invoke-static {v1}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
+
+    move-result-object v0
+
+    goto :goto_2
+
+    :cond_4
+    invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
+
+    move-result-object v0
+
+    :goto_2
+    new-instance v4, Ljava/util/ArrayList;
+
+    invoke-direct {v4}, Ljava/util/ArrayList;-><init>()V
+
+    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :goto_3
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_6
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ljava/lang/String;
+
+    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
+
+    move-result v2
+
+    sparse-switch v2, :sswitch_data_0
+
+    goto :goto_4
+
+    :sswitch_0
+    const-string v2, "interstitial"
+
+    invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_5
+
+    sget-object v1, Lcom/google/android/gms/internal/ads/zzbdg$zzd$zza;->zzc:Lcom/google/android/gms/internal/ads/zzbdg$zzd$zza;
+
+    goto :goto_5
+
+    :sswitch_1
+    const-string v2, "rewarded"
+
+    invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_5
+
+    sget-object v1, Lcom/google/android/gms/internal/ads/zzbdg$zzd$zza;->zzj:Lcom/google/android/gms/internal/ads/zzbdg$zzd$zza;
+
+    goto :goto_5
+
+    :sswitch_2
+    const-string v2, "native"
+
+    invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_5
+
+    sget-object v1, Lcom/google/android/gms/internal/ads/zzbdg$zzd$zza;->zzf:Lcom/google/android/gms/internal/ads/zzbdg$zzd$zza;
+
+    goto :goto_5
+
+    :sswitch_3
+    const-string v2, "banner"
+
+    invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_5
+
+    sget-object v1, Lcom/google/android/gms/internal/ads/zzbdg$zzd$zza;->zzb:Lcom/google/android/gms/internal/ads/zzbdg$zzd$zza;
+
+    goto :goto_5
+
+    :cond_5
+    :goto_4
+    sget-object v1, Lcom/google/android/gms/internal/ads/zzbdg$zzd$zza;->zza:Lcom/google/android/gms/internal/ads/zzbdg$zzd$zza;
+
+    :goto_5
+    invoke-virtual {v4, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    goto :goto_3
+
+    :cond_6
+    iget-object v0, p0, Lcom/google/android/gms/internal/ads/zzeeg;->zzb:Lcom/google/android/gms/internal/ads/zzeeh;
+
+    invoke-static {v0, p1}, Lcom/google/android/gms/internal/ads/zzeeh;->zzb(Lcom/google/android/gms/internal/ads/zzeeh;Landroid/os/Bundle;)Lcom/google/android/gms/internal/ads/zzbdg$zzaf$zzd;
+
+    move-result-object v6
+
+    iget-object v0, p0, Lcom/google/android/gms/internal/ads/zzeeg;->zzb:Lcom/google/android/gms/internal/ads/zzeeh;
+
+    invoke-static {v0, p1}, Lcom/google/android/gms/internal/ads/zzeeh;->zza(Lcom/google/android/gms/internal/ads/zzeeh;Landroid/os/Bundle;)Lcom/google/android/gms/internal/ads/zzbdg$zzab;
+
+    move-result-object v5
+
+    iget-object p1, p0, Lcom/google/android/gms/internal/ads/zzeeg;->zzb:Lcom/google/android/gms/internal/ads/zzeeh;
+
+    iget-boolean v3, p0, Lcom/google/android/gms/internal/ads/zzeeg;->zza:Z
+
+    new-instance v1, Lcom/google/android/gms/internal/ads/zzeef;
+
+    move-object v2, p0
+
+    invoke-direct/range {v1 .. v6}, Lcom/google/android/gms/internal/ads/zzeef;-><init>(Lcom/google/android/gms/internal/ads/zzeeg;ZLjava/util/ArrayList;Lcom/google/android/gms/internal/ads/zzbdg$zzab;Lcom/google/android/gms/internal/ads/zzbdg$zzaf$zzd;)V
+
+    iget-object p0, p1, Lcom/google/android/gms/internal/ads/zzeeh;->zza:Lcom/google/android/gms/internal/ads/zzedv;
+
+    invoke-virtual {p0, v1}, Lcom/google/android/gms/internal/ads/zzedv;->zza(Lcom/google/android/gms/internal/ads/zzfjq;)V
+
+    return-void
+
+    nop
+
+    :sswitch_data_0
+    .sparse-switch
+        -0x533a80d4 -> :sswitch_3
+        -0x3ebdafe9 -> :sswitch_2
+        -0xe47b3f2 -> :sswitch_1
+        0x240b672c -> :sswitch_0
+    .end sparse-switch
+.end method

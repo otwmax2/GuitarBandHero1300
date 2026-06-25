@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:orientation="horizontal"
+    android:id="@id/drawer_layout"
+    android:background="@drawable/backgroundimage"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@id/nav_view_container"
+        android:background="#ff0b0e18"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/toolbar">
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@id/nav_recycler_view"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" />
+    </LinearLayout>
+    <TextView
+        android:id="@id/divider"
+        android:background="#ff1c233c"
+        android:layout_width="1.0dip"
+        android:layout_height="fill_parent"
+        android:layout_toRightOf="@id/nav_view_container" />
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1.0"
+        android:layout_toRightOf="@id/divider">
+        <include
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginTop="4.0dip"
+            android:layout_above="@id/layAd"
+            layout="@layout/content_main" />
+        <RelativeLayout
+            android:id="@id/layAd"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16.0dip"
+            android:layout_marginRight="16.0dip"
+            android:layout_alignParentBottom="true">
+            <RelativeLayout
+                android:id="@id/templateAd"
+                android:background="@android:color/white"
+                android:visibility="gone"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@id/imgIklan"
+                    android:layout_width="280.0dip"
+                    android:layout_height="45.0dip"
+                    android:src="@drawable/iklan"
+                    android:scaleType="fitStart"
+                    android:adjustViewBounds="true" />
+                <ImageView
+                    android:padding="2.0dip"
+                    android:layout_width="100.0dip"
+                    android:layout_height="45.0dip"
+                    android:src="@drawable/google_play"
+                    android:layout_toRightOf="@id/imgIklan" />
+                <ImageView
+                    android:id="@id/imgBerlangganan"
+                    android:padding="2.0dip"
+                    android:layout_width="200.0dip"
+                    android:layout_height="45.0dip"
+                    android:src="@drawable/berlangganan"
+                    android:adjustViewBounds="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true" />
+            </RelativeLayout>
+            <com.google.android.gms.ads.AdView
+                android:id="@id/adView"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                app:adSize="SMART_BANNER"
+                app:adUnitId="@string/banner_ad_unit_id" />
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

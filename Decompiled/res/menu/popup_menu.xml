@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:aapt="http://schemas.android.com/aapt">
+    <item
+        android:id="@id/menu_terbaru"
+        android:title="Sort By Terbaru" />
+    <item
+        android:id="@id/menu_default"
+        android:title="Sort By Default" />
+    <item
+        android:id="@id/menu_abjad"
+        android:title="Sort By Judul" />
+    <item
+        android:id="@id/menu_reload"
+        android:title="Reload Data" />
+</menu>

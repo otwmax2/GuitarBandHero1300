@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <group
+        android:checkableBehavior="single">
+        <item
+            android:icon="@drawable/ic_round_queue_music_24"
+            android:id="@id/nav_playlist"
+            android:title="ALL SONG" />
+    </group>
+    <group
+        android:id="@id/group1"
+        android:checkableBehavior="single">
+        <item
+            android:icon="@drawable/ic_round_settings_24"
+            android:id="@id/nav_setting"
+            android:title="Pengaturan" />
+        <item
+            android:icon="@drawable/ic_round_help_24"
+            android:id="@id/nav_help"
+            android:title="Contact Us" />
+    </group>
+    <group
+        android:id="@id/group2"
+        android:checkableBehavior="single">
+        <item
+            android:icon="@drawable/baseline_download_for_offline_24"
+            android:id="@id/nav_import"
+            android:title="Import Data" />
+        <item
+            android:icon="@drawable/ic_baseline_stars_24"
+            android:id="@id/nav_subscribe"
+            android:title="Berlangganan" />
+    </group>
+</menu>

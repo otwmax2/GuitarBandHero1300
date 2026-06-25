@@ -1,0 +1,538 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:background="@drawable/backgroundimage"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <View
+        android:background="#99000000"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+    <RelativeLayout
+        android:id="@id/topBar"
+        android:padding="12.0dip"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent">
+        <Button
+            android:textAppearance="@style/TextAppearance.FontPath.Bold"
+            android:textSize="11.0sp"
+            android:textColor="#ffffffff"
+            android:id="@id/btnBackTop"
+            android:background="@drawable/bg_cancel_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="32.0dip"
+            android:text="BACK"
+            android:drawableLeft="@drawable/ic_back"
+            android:drawablePadding="8.0dip"
+            android:textAllCaps="true"
+            android:paddingStart="12.0dip"
+            android:paddingEnd="16.0dip"
+            android:drawableTint="#ffffffff" />
+        <LinearLayout
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true">
+            <TextView
+                android:textAppearance="@style/TextAppearance.FontPath.Bold"
+                android:textSize="11.0sp"
+                android:textColor="#ffffffff"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CARA IMPORT LAGU KUSTOM" />
+        </LinearLayout>
+        <ImageButton
+            android:background="@drawable/bg_cancel_btn"
+            android:padding="6.0dip"
+            android:layout_width="32.0dip"
+            android:layout_height="32.0dip"
+            android:src="@drawable/ic_round_help_24"
+            android:scaleType="fitCenter"
+            android:layout_alignParentRight="true"
+            app:tint="#ffffffff" />
+    </RelativeLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:id="@id/mainPanel"
+        android:background="@drawable/bg_import_card"
+        android:padding="12.0dip"
+        android:layout_width="fill_parent"
+        android:layout_height="0.0dip"
+        android:layout_marginLeft="32.0dip"
+        android:layout_marginTop="4.0dip"
+        android:layout_marginRight="32.0dip"
+        android:layout_marginBottom="64.0dip"
+        android:layout_marginHorizontal="32.0dip"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/topBar">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0"
+            android:paddingEnd="12.0dip">
+            <TextView
+                android:textAppearance="@style/TextAppearance.FontPath.Bold"
+                android:textSize="12.0sp"
+                android:textColor="#ffa24bd6"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="///   ALUR IMPORT LAGU   ///" />
+            <LinearLayout
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8.0dip">
+                <LinearLayout
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:layout_width="60.0dip"
+                        android:layout_height="70.0dip"
+                        android:src="@drawable/baseline_folder_zip_24"
+                        app:tint="#ff7b61ff" />
+                    <TextView
+                        android:textAppearance="@style/TextAppearance.FontPath.Bold"
+                        android:textSize="10.0sp"
+                        android:textColor="#ffffffff"
+                        android:gravity="center"
+                        android:background="@drawable/bg_circular_gradient"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4.0dip"
+                        android:minWidth="20.0dip"
+                        android:minHeight="20.0dip"
+                        android:text="1" />
+                    <TextView
+                        android:textAppearance="@style/TextAppearance.FontPath.Regular"
+                        android:textSize="9.0sp"
+                        android:textColor="#ffffffff"
+                        android:gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Download\nZIP File" />
+                </LinearLayout>
+                <ImageView
+                    android:layout_width="20.0dip"
+                    android:layout_height="20.0dip"
+                    android:layout_marginLeft="4.0dip"
+                    android:layout_marginRight="4.0dip"
+                    android:src="@drawable/ic_appintro_next"
+                    android:layout_marginHorizontal="4.0dip"
+                    app:tint="#33ffffff" />
+                <LinearLayout
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:padding="8.0dip"
+                        android:layout_width="60.0dip"
+                        android:layout_height="70.0dip"
+                        android:src="@drawable/logo_new" />
+                    <TextView
+                        android:textAppearance="@style/TextAppearance.FontPath.Bold"
+                        android:textSize="10.0sp"
+                        android:textColor="#ffffffff"
+                        android:gravity="center"
+                        android:background="@drawable/bg_circular_gradient"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4.0dip"
+                        android:minWidth="20.0dip"
+                        android:minHeight="20.0dip"
+                        android:text="2" />
+                    <TextView
+                        android:textAppearance="@style/TextAppearance.FontPath.Regular"
+                        android:textSize="9.0sp"
+                        android:textColor="#ffffffff"
+                        android:gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Import ke\nAplikasi" />
+                </LinearLayout>
+                <ImageView
+                    android:layout_width="20.0dip"
+                    android:layout_height="20.0dip"
+                    android:layout_marginLeft="4.0dip"
+                    android:layout_marginRight="4.0dip"
+                    android:src="@drawable/ic_appintro_next"
+                    android:layout_marginHorizontal="4.0dip"
+                    app:tint="#33ffffff" />
+                <LinearLayout
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:padding="8.0dip"
+                        android:layout_width="60.0dip"
+                        android:layout_height="70.0dip"
+                        android:src="@drawable/ic_round_reload"
+                        android:tint="@android:color/white" />
+                    <TextView
+                        android:textAppearance="@style/TextAppearance.FontPath.Bold"
+                        android:textSize="10.0sp"
+                        android:textColor="#ffffffff"
+                        android:gravity="center"
+                        android:background="@drawable/bg_circular_gradient"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4.0dip"
+                        android:minWidth="20.0dip"
+                        android:minHeight="20.0dip"
+                        android:text="3" />
+                    <TextView
+                        android:textAppearance="@style/TextAppearance.FontPath.Regular"
+                        android:textSize="9.0sp"
+                        android:textColor="#ffffffff"
+                        android:gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Tunggu Proses\nImport" />
+                </LinearLayout>
+                <ImageView
+                    android:layout_width="20.0dip"
+                    android:layout_height="20.0dip"
+                    android:layout_marginLeft="4.0dip"
+                    android:layout_marginRight="4.0dip"
+                    android:src="@drawable/ic_appintro_next"
+                    android:layout_marginHorizontal="4.0dip"
+                    app:tint="#33ffffff" />
+                <LinearLayout
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:padding="8.0dip"
+                        android:layout_width="60.0dip"
+                        android:layout_height="70.0dip"
+                        android:src="@drawable/ic_round_check_circle_outline_24"
+                        android:scaleType="centerCrop"
+                        android:tint="#ff7b61ff" />
+                    <TextView
+                        android:textAppearance="@style/TextAppearance.FontPath.Bold"
+                        android:textSize="10.0sp"
+                        android:textColor="#ffffffff"
+                        android:gravity="center"
+                        android:background="@drawable/bg_circular_gradient"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4.0dip"
+                        android:minWidth="20.0dip"
+                        android:minHeight="20.0dip"
+                        android:text="4" />
+                    <TextView
+                        android:textAppearance="@style/TextAppearance.FontPath.Regular"
+                        android:textSize="9.0sp"
+                        android:textColor="#ffffffff"
+                        android:gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Lagu Siap\nDimainkan" />
+                </LinearLayout>
+            </LinearLayout>
+            <View
+                android:background="#1affffff"
+                android:layout_width="fill_parent"
+                android:layout_height="1.0dip"
+                android:layout_marginTop="12.0dip"
+                android:layout_marginBottom="12.0dip"
+                android:layout_marginVertical="12.0dip" />
+            <RelativeLayout
+                android:background="@drawable/bg_info_box"
+                android:padding="10.0dip"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@id/icGlobe"
+                    android:layout_width="36.0dip"
+                    android:layout_height="36.0dip"
+                    android:src="@drawable/ic_round_help_24"
+                    app:tint="#ff7b61ff" />
+                <TextView
+                    android:textAppearance="@style/TextAppearance.FontPath.SemiBold"
+                    android:textSize="10.0sp"
+                    android:textColor="#ffffffff"
+                    android:id="@id/txtEnchorDesc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Download lagu kustom dari\nhttps://www.enchor.us/\natau dari link yang sudah disediakan."
+                    android:layout_marginStart="10.0dip"
+                    android:layout_toEndOf="@id/icGlobe" />
+                <Button
+                    android:textAppearance="@style/TextAppearance.FontPath.Bold"
+                    android:textSize="9.0sp"
+                    android:textColor="#ffffffff"
+                    android:id="@id/btnOpenEnchorInline"
+                    android:background="@drawable/bg_cancel_btn"
+                    android:paddingLeft="12.0dip"
+                    android:paddingRight="12.0dip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="36.0dip"
+                    android:text="OPEN ENCHOR.US"
+                    android:drawableRight="@drawable/ic_rotate_right"
+                    android:drawablePadding="6.0dip"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:textAllCaps="true"
+                    android:drawableTint="#ffffffff"
+                    android:paddingHorizontal="12.0dip" />
+            </RelativeLayout>
+        </LinearLayout>
+        <ScrollView
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0">
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:background="@drawable/bg_import_card"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:clipToOutline="true">
+                    <TextView
+                        android:textAppearance="@style/TextAppearance.FontPath.Bold"
+                        android:textSize="10.0sp"
+                        android:textColor="#ffffffff"
+                        android:background="#ffa24bd6"
+                        android:padding="6.0dip"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="★ METODE 1 - IMPORT OTOMATIS (DISARANKAN)" />
+                    <TextView
+                        android:textAppearance="@style/TextAppearance.FontPath.Regular"
+                        android:textSize="9.0sp"
+                        android:textColor="#ffffffff"
+                        android:padding="8.0dip"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="1  Download file lagu dalam format ZIP dari:\n    • Enchor.us\n    • Link download yang telah disediakan\n2  Buka menu Import Song di dalam game.\n3  Tekan tombol Browse ZIP File.\n4  Pilih file ZIP yang sudah didownload.\n5  Tunggu proses import hingga selesai.\n6  Setelah berhasil, lagu akan muncul pada daftar lagu di dalam game." />
+                </LinearLayout>
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:background="@drawable/bg_import_card"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10.0dip">
+                    <TextView
+                        android:textAppearance="@style/TextAppearance.FontPath.Bold"
+                        android:textSize="10.0sp"
+                        android:textColor="#ffffffff"
+                        android:background="#ff1976d2"
+                        android:padding="6.0dip"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="📁 METODE 2 - COPY MANUAL" />
+                    <TextView
+                        android:textAppearance="@style/TextAppearance.FontPath.Regular"
+                        android:textSize="9.0sp"
+                        android:textColor="#ffffffff"
+                        android:paddingLeft="8.0dip"
+                        android:paddingTop="8.0dip"
+                        android:paddingRight="8.0dip"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="1  Download dan ekstrak file ZIP lagu.\n2  Buka File Manager pada perangkat Android.\n3  Salin folder lagu yang telah diekstrak ke lokasi berikut:\n    Android > media > com.bezets.gitarindo > GBISongs"
+                        android:paddingHorizontal="8.0dip" />
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:background="#15ffffff"
+                        android:padding="10.0dip"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8.0dip">
+                        <TextView
+                            android:textAppearance="@style/TextAppearance.FontPath.Bold"
+                            android:textSize="8.0sp"
+                            android:textColor="#ff7b61ff"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Contoh Struktur Folder:" />
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="6.0dip">
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="0.0dip"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.0">
+                                <LinearLayout
+                                    android:gravity="center_vertical"
+                                    android:orientation="horizontal"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content">
+                                    <ImageView
+                                        android:layout_width="14.0dip"
+                                        android:layout_height="14.0dip"
+                                        android:src="@drawable/ic_folder"
+                                        app:tint="#ff2196f3" />
+                                    <TextView
+                                        android:textAppearance="@style/TextAppearance.FontPath.Bold"
+                                        android:textSize="9.0sp"
+                                        android:textColor="#ffffffff"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="GBISongs"
+                                        android:layout_marginStart="6.0dip" />
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:gravity="center_vertical"
+                                    android:orientation="horizontal"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="4.0dip"
+                                    android:layout_marginStart="20.0dip">
+                                    <ImageView
+                                        android:layout_width="12.0dip"
+                                        android:layout_height="12.0dip"
+                                        android:src="@drawable/ic_folder"
+                                        app:tint="#ffffc107" />
+                                    <TextView
+                                        android:textAppearance="@style/TextAppearance.FontPath.Regular"
+                                        android:textSize="8.0sp"
+                                        android:textColor="#ffffffff"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Linkin Park - Numb"
+                                        android:layout_marginStart="6.0dip" />
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:gravity="center_vertical"
+                                    android:orientation="horizontal"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="2.0dip"
+                                    android:layout_marginStart="20.0dip">
+                                    <ImageView
+                                        android:layout_width="12.0dip"
+                                        android:layout_height="12.0dip"
+                                        android:src="@drawable/ic_folder"
+                                        app:tint="#ffffc107" />
+                                    <TextView
+                                        android:textAppearance="@style/TextAppearance.FontPath.Regular"
+                                        android:textSize="8.0sp"
+                                        android:textColor="#ffffffff"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Avenged Sevenfold - Nightmare"
+                                        android:layout_marginStart="6.0dip" />
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:gravity="center_vertical"
+                                    android:orientation="horizontal"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="2.0dip"
+                                    android:layout_marginStart="20.0dip">
+                                    <ImageView
+                                        android:layout_width="12.0dip"
+                                        android:layout_height="12.0dip"
+                                        android:src="@drawable/ic_folder"
+                                        app:tint="#ffffc107" />
+                                    <TextView
+                                        android:textAppearance="@style/TextAppearance.FontPath.Regular"
+                                        android:textSize="8.0sp"
+                                        android:textColor="#ffffffff"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Metallica - One"
+                                        android:layout_marginStart="6.0dip" />
+                                </LinearLayout>
+                            </LinearLayout>
+                            <TextView
+                                android:textAppearance="@style/TextAppearance.FontPath.Regular"
+                                android:textSize="8.0sp"
+                                android:textColor="#ff4db8ff"
+                                android:layout_gravity="center_vertical"
+                                android:layout_width="0.0dip"
+                                android:layout_height="wrap_content"
+                                android:text="(Setiap folder berisi file audio dan chart)"
+                                android:layout_weight="0.8" />
+                        </LinearLayout>
+                    </LinearLayout>
+                    <TextView
+                        android:textAppearance="@style/TextAppearance.FontPath.Regular"
+                        android:textSize="9.0sp"
+                        android:textColor="#ffffffff"
+                        android:paddingLeft="8.0dip"
+                        android:paddingRight="8.0dip"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="5  Kembali ke game dan lakukan Refresh Song List jika diperlukan."
+                        android:paddingHorizontal="8.0dip" />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+    <LinearLayout
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12.0dip"
+        app:layout_constraintBottom_toBottomOf="parent">
+        <Button
+            android:textAppearance="@style/TextAppearance.FontPath.Bold"
+            android:textSize="12.0sp"
+            android:textColor="#ffffffff"
+            android:id="@id/btnBackBottom"
+            android:background="@drawable/bg_cancel_btn"
+            android:paddingLeft="16.0dip"
+            android:paddingRight="16.0dip"
+            android:layout_width="160.0dip"
+            android:layout_height="40.0dip"
+            android:text="BACK"
+            android:drawableLeft="@drawable/ic_back"
+            android:drawablePadding="8.0dip"
+            android:layout_marginEnd="12.0dip"
+            android:drawableTint="#ffffffff"
+            android:paddingHorizontal="16.0dip" />
+        <Button
+            android:textAppearance="@style/TextAppearance.FontPath.Bold"
+            android:textSize="12.0sp"
+            android:textColor="#ffffffff"
+            android:id="@id/btnOpenEnchorBottom"
+            android:background="@drawable/bg_cancel_btn"
+            android:paddingLeft="16.0dip"
+            android:paddingRight="16.0dip"
+            android:layout_width="220.0dip"
+            android:layout_height="40.0dip"
+            android:text="OPEN ENCHOR.US"
+            android:drawableLeft="@drawable/ic_round_help_24"
+            android:drawablePadding="8.0dip"
+            android:textAllCaps="false"
+            android:layout_marginEnd="12.0dip"
+            android:drawableTint="#ffffffff"
+            android:paddingHorizontal="16.0dip" />
+        <Button
+            android:textAppearance="@style/TextAppearance.FontPath.Bold"
+            android:textSize="12.0sp"
+            android:textColor="#ffffffff"
+            android:id="@id/btnImportSongBottom"
+            android:background="@drawable/bg_button_purple"
+            android:paddingLeft="16.0dip"
+            android:paddingRight="16.0dip"
+            android:layout_width="220.0dip"
+            android:layout_height="40.0dip"
+            android:text="IMPORT SONG"
+            android:drawableLeft="@drawable/baseline_downloading_24"
+            android:drawablePadding="8.0dip"
+            android:textAllCaps="false"
+            android:drawableTint="#ffffffff"
+            android:paddingHorizontal="16.0dip" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

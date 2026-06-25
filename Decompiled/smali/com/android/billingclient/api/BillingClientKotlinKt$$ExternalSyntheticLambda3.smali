@@ -1,0 +1,34 @@
+.class public final synthetic Lcom/android/billingclient/api/BillingClientKotlinKt$$ExternalSyntheticLambda3;
+.super Ljava/lang/Object;
+.source "com.android.billingclient:billing-ktx@@9.0.0"
+
+# interfaces
+.implements Lcom/android/billingclient/api/ExternalOfferAvailabilityListener;
+
+
+# instance fields
+.field public synthetic f$0:Lkotlinx/coroutines/CompletableDeferred;
+
+
+# direct methods
+.method public synthetic constructor <init>(Lkotlinx/coroutines/CompletableDeferred;)V
+    .registers 2
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lcom/android/billingclient/api/BillingClientKotlinKt$$ExternalSyntheticLambda3;->f$0:Lkotlinx/coroutines/CompletableDeferred;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final onExternalOfferAvailabilityResponse(Lcom/android/billingclient/api/BillingResult;)V
+    .registers 2
+
+    iget-object p0, p0, Lcom/android/billingclient/api/BillingClientKotlinKt$$ExternalSyntheticLambda3;->f$0:Lkotlinx/coroutines/CompletableDeferred;
+
+    invoke-static {p0, p1}, Lcom/android/billingclient/api/BillingClientKotlinKt;->isExternalOfferAvailable$lambda$0(Lkotlinx/coroutines/CompletableDeferred;Lcom/android/billingclient/api/BillingResult;)V
+
+    return-void
+.end method

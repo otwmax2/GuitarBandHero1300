@@ -1,0 +1,64 @@
+.class public final Lcom/google/android/gms/internal/ads/zzewk;
+.super Ljava/lang/Object;
+.source "com.google.android.gms:play-services-ads@@23.1.0"
+
+# interfaces
+.implements Lcom/google/android/gms/internal/ads/zzewr;
+
+
+# instance fields
+.field private final zza:Z
+
+
+# direct methods
+.method constructor <init>(Lcom/google/android/gms/internal/ads/zzfdi;)V
+    .registers 2
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    if-eqz p1, :cond_0
+
+    const/4 p1, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p1, 0x0
+
+    :goto_0
+    iput-boolean p1, p0, Lcom/google/android/gms/internal/ads/zzewk;->zza:Z
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final zza()I
+    .registers 1
+
+    const/16 p0, 0x24
+
+    return p0
+.end method
+
+.method public final zzb()Lcom/google/common/util/concurrent/ListenableFuture;
+    .registers 1
+
+    iget-boolean p0, p0, Lcom/google/android/gms/internal/ads/zzewk;->zza:Z
+
+    if-eqz p0, :cond_0
+
+    sget-object p0, Lcom/google/android/gms/internal/ads/zzewj;->zza:Lcom/google/android/gms/internal/ads/zzewj;
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p0, 0x0
+
+    :goto_0
+    invoke-static {p0}, Lcom/google/android/gms/internal/ads/zzgee;->zzh(Ljava/lang/Object;)Lcom/google/common/util/concurrent/ListenableFuture;
+
+    move-result-object p0
+
+    return-object p0
+.end method

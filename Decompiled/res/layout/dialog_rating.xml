@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="350.0dip"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView
+        android:background="@color/colorAccent"
+        android:layout_width="fill_parent"
+        android:layout_height="1.0dip" />
+    <RatingBar
+        android:layout_gravity="center"
+        android:id="@id/ratingBarDialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10.0dip"
+        android:numStars="5"
+        android:rating="0.0"
+        android:stepSize="1.0"
+        android:isIndicator="false"
+        android:layout_centerVertical="true"
+        style="?ratingBarStyleIndicator" />
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10.0dip">
+        <Button
+            android:id="@id/btnBatalRate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cancel"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:textAllCaps="false"
+            android:layout_alignParentStart="true"
+            style="@style/Widget.AppCompat.Button.Borderless" />
+        <Button
+            android:theme="@style/MyButton"
+            android:textColor="@android:color/white"
+            android:id="@id/btnSimpanRate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Simpan"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:textAllCaps="false"
+            android:layout_alignParentEnd="true" />
+    </RelativeLayout>
+</LinearLayout>

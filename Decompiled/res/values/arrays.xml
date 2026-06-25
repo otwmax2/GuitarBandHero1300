@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="jml_btn_array">
+        <item>2 Jari</item>
+        <item>3 Jari</item>
+        <item>4 Jari</item>
+        <item>5 Jari</item>
+    </string-array>
+    <string-array name="orientation">
+        <item>Landscape</item>
+        <item>Portrait</item>
+    </string-array>
+    <string-array name="sort_array">
+        <item>Default</item>
+        <item>Judul</item>
+        <item>Artis/Band</item>
+        <item>Terbaru</item>
+    </string-array>
+</resources>

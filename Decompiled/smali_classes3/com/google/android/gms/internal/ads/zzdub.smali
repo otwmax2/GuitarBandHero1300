@@ -1,0 +1,44 @@
+.class public final Lcom/google/android/gms/internal/ads/zzdub;
+.super Ljava/lang/Object;
+.source "com.google.android.gms:play-services-ads@@23.1.0"
+
+# interfaces
+.implements Lcom/google/android/gms/internal/ads/zzhiv;
+
+
+# direct methods
+.method public constructor <init>()V
+    .registers 1
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+.method public static zza()Lcom/google/android/gms/internal/ads/zzdub;
+    .registers 1
+
+    invoke-static {}, Lcom/google/android/gms/internal/ads/zzdua;->zza()Lcom/google/android/gms/internal/ads/zzdub;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+
+# virtual methods
+.method public final synthetic zzb()Ljava/lang/Object;
+    .registers 4
+
+    new-instance p0, Lcom/google/android/gms/internal/ads/zzduj;
+
+    sget-object v0, Lcom/google/android/gms/internal/ads/zzfkh;->zzA:Lcom/google/android/gms/internal/ads/zzfkh;
+
+    sget-object v1, Lcom/google/android/gms/internal/ads/zzfkh;->zzd:Lcom/google/android/gms/internal/ads/zzfkh;
+
+    const-string v2, "t_load_as"
+
+    invoke-direct {p0, v2, v0, v1}, Lcom/google/android/gms/internal/ads/zzduj;-><init>(Ljava/lang/String;Lcom/google/android/gms/internal/ads/zzfkh;Lcom/google/android/gms/internal/ads/zzfkh;)V
+
+    return-object p0
+.end method
